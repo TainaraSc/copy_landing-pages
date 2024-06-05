@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W4LPJQ');</script>
+
+<meta charset="utf-8" />
+<title>Curso Node.js e MongoDB</title>
+<meta content="Aprenda desenvolvimento web usando Node.js e MongoDB" name="description" />
+<meta content="Curso Node.js e MongoDB" property="og:title" />
+<meta content="Aprenda desenvolvimento web usando Node.js e MongoDB" property="og:description" />
+<meta content="img/banner-nodejs.jpeg" property="og:image" />
+<meta content="Curso Node.js e MongoDB JS" property="twitter:title" />
+<meta content="Aprenda desenvolvimento web usando Node.js e MongoDB" property="twitter:description" />
+<meta content="img/banner-nodejs.jpeg" property="twitter:image" />
+<meta property="og:type" content="website" />
+<meta content="summary_large_image" name="twitter:card" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<meta content="Webflow" name="generator" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+<script type="text/javascript">WebFont.load({google:{families:["Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic","Work Sans:300,regular,500,600,700,800,900"]}});</script>
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+<script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+<link href="https://luiztools.com.br/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="https://luiztools.com.br/favicon.ico" rel="apple-touch-icon" />
+<style>body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}</style>
+
+
+<script src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-mailmunch-site-id="232816" async="async"></script>
+</head>
+<body class="body-2">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4LPJQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="hero">
+<div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+<div class="div-block-89"><a href="/" aria-current="page" class="brand w-nav-brand w--current"><script data-pagespeed-no-defer>//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://www.luiztools.com.br/curso-nodejs?utm_source=blog&utm_medium=link&utm_campaign=auto&utm_content=','8Xxa2XQLv9',true,false,'HZugpiI8BHY');
+//]]></script><img src="data:image/webp;base64,UklGRhoGAABXRUJQVlA4IA4GAADwHACdASqgACcAPm0ylUgkIqIhJFv7EIANiWwAzFCPLf9d/YvyK/Gb5d65/SvIz1ZxaOyicj+cPYA8bT1R+YD9nfVm/0P7M+7z0AP6r/oOtR9Gny3fZ9/cn9t/amzqTaaMs/rI+n0PdkOwjvcfhvM36q60WZ70eFGX+5Arn/SP6K2bW1fSAP0KaaNlVLKB4HGLxZrv7F4lYKDbMPklo3A2V5OL3NiwBT32n1gJLN9fg1uIcczRdT6cKVOnIEmSd8UaP8SGx+BfEdCzQS8FfXEBp4FuNJqUwoM2dg7tGftArww1pRhwTtXXZrxUiEf75QAA/vilwW7PoKMgfdHLVk/kDOby9vf6ErSifvg6f//XV0KTa73/d3af/8Al8ozvCjh+EUYIb8Bu7UI4B/B4T2rbDMnEGvA+XqGoxdqvhsCdSeApzi+NL6RF+R+Vaj4CxW/2FPIUdAsJwTsRhLcWJEy+K0PhEJO2AaY+G2qbMi31hTsKqHKLWMrO/lPwxuPsn02ojlcXrEqyyWejHj8Ipm4S47I6j3rUMOYd8PJFoYSd8NUwD7nsTFhOVh9V8Pt+Fttkyz24ExANklYfOerkRt0ItdtGUgE55yLdveg5I4FS2r85hN8wcWjoeYiJXy9RFKV5seTILq21y4tk7oTcgNGdUh1RgDRgx8tQdP1Q/KksZHsSJLsj3hw0JsJfBOgOa/ymjPleWwrIQYQM+Z/B7SQ785+gJATpEJvIb6wd+/SzOnsMKOrm7gsVisF32HS8bYWVASvA5jnPcz9y9OgkuDmwfFe9kUHs90CNOI6568eoVWH+xXcbG3Y8R3ZjEneshnPyYGGzmDXXXSnRU4r+twyYytRz3JbIvaQiyzTrTTcB6YmASeJLlrpiTxqfGg4zstNDikR4QcitCa3zTJNnKC9Pq3u+f9aZUR+aedG9zedYG7NGmK8PqYZ04KHmjUbRkOvhRyqEeOL5NZ/WePqrh9BsbcaREuBoYSaOUIqI5wnhJwMFIyDKyB9tXWeACDBXzGlqtSdiSeYpx9XcJLASTeC+iDoAEzu/kX+03ltdRAPCvPc/rgotegFOZgAkIGOoKwH5+0bETCHlCxHcMo0o6m3OwjFZBU89KnNMeY3OPU+ewTYqQDrRcQ9BH+OD4vDPaeBagWwMrzlM6DQaj2Jn3y85aAN9SJcaFE1lm9seIqGgm1xLxvC4RYhwic1NrX3t94QTh3udXVxvIt4S+veV6OxVOn8wTiPBb8RQNkCL0SZyDV5w62Ucvja3Aq9DaLITJ4XvDrJ1B+2OlugrYwpjfrns+LfKZCUkw41fEGgN5wOVDOSpfo8gmsvgvOmt9owCAMGvXSloe/sHV+3vCeKfkk5pLURLmllrZGXlsASuN9EJaJaEJ8IRmJ9GRqwpMn+KbuPbGGJb/qjoHcGJzOf8n2t9Lb/AAnKY/OE8fQVl+y27rf/EcjdZo5e+nSCekWWVP2n7eAdpp4KPFLJDx/NPEUAeo/Cu7RNFWvMgD5B5t8NnrtgsmWCXmCAuVUfLZizGDXkvV3c0jq4oijkbx954IM8yuTj2T/+k3jPzmgnTRhF8fXJVyLbYPCGTATzkDuBkn9t+8ImIH4mlr0DDj8E6uDusd15uar0F7wH0AQ36yxiNnAjXLnQ8kF+K96sVv7pS5WF6tuc3+tQsqV/OGFqJ9HPazd1b4zqIMx+5iOrCEe9W5d/XOP3cxU5NVWspCK6bHTwz7O/21VZvF9vEAjJqgB/izm0skaQS/+Ymuy6BKliBtjZTEEWj2XgTgv+uAKWvRVIKoAWOVh3hje9NxYW7UIcoU2U49LMkCG2a1kNdk+eWC6zZf+uHl4A8LiFdCQZbpC0HSgpgxzYALkW3NerVa5N/Edk7gQZcuDaFygwqXD4fo5Kbnx+BvRhSCDh4w4ty9D4LU8O60tYgqNflm9ydDPwdBfQ4KjqJAqfoNDzFaB0Capx6+r7Xece9ZiV/WtlehMo4f2whJDkYFZVd2o2MN4ixxso398xb+dpx9fRVBhYG38ARXYAUsiAAH00iQBSgu2oPZSYQpAQBDY9cHAAAAA==" alt class="image-14" data-pagespeed-url-hash="2779344225" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a>
+<nav role="navigation" class="nav-menu-4 w-nav-menu">
+<div class="div-block-88"><a href="#" aria-current="page" class="nav-link-4 w-nav-link w--current">Início</a></div>
+<div class="div-block-88"><a href="#conteudo" class="nav-link-4 w-nav-link">Conteúdo</a></div>
+<div class="div-block-88"><a href="#inscricao" target="_blank" class="nav-link-4 w-nav-link">Inscrição</a></div>
+<div class="div-block-88"><a href="#duvidas" target="_blank" class="nav-link-4 w-nav-link">Dúvidas</a></div>
+</nav>
+<div class="menu-button-3 w-nav-button">
+<div class="icon-2 w-icon-nav-menu"></div>
+</div>
+</div>
+</div>
+<div class="hero-wrapper masterclass">
+<div class="w-layout-grid grid-2">
+<div>
+<h1 class="heading-hero">Curso Node.js e MongoDB</h1>
+<h3 class="heading-3 hero-h3">Aprenda a desenvolver suas primeiras aplicações web e web APIs usando
+as tecnologias que mais crescem no mercado!</h3>
+<h3 class="heading-3 hero-h3">Dê um start na sua carreira ou atualize-se, se tornando um
+desenvolvedor Node.js!</h3>
+<div class="cta-block"><a href="#inscricao" class="cta-button hero-button w-button">Ver Preço e
+Inscrição</a>
+<div class="paragraph hero-paragraph">Curso atualizado 2024, prático, com certificado e suporte
+online.</div>
+</div>
+</div>
+<div id="w-node-e6ff84731c2b-f9b93eee" style="margin-top: 100px;">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/_LvzW_cvCaQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<h4 class="heading-4">torne-se um desenvolvedor de aplicações</h4>
+<h1 class="heading-2 width-1">Node.js e MongoDB</h1>
+<h3 class="heading-3 section">JavaScript é hoje a linguagem de programação mais popular do mundo. Aliada à
+plataforma Node.js e ao banco de dados MongoDB, você desenvolve end-to-end com apenas uma linguagem
+de programação.</h3>
+<div class="w-layout-grid grid-3 _3x3">
+<div class="dark-card">
+<div class="circle blue">
+<img src="img/xnodejs-logo.png.pagespeed.ic.AvVxVthGDA.webp" width="38" data-pagespeed-url-hash="1508512148" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+<div class="title">Node.js</div>
+<div class="paragraph">Uma plataforma que permite criar aplicações utilizando arquiteturas modernas
+e
+escaláveis.</div>
+</div>
+<div class="dark-card">
+<div class="circle blue">
+<img src="img/xmongodb-logo.png.pagespeed.ic.qM8F_M2z8Y.webp" width="38" data-pagespeed-url-hash="2304456457" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+<div class="title">MongoDB</div>
+<div class="paragraph">Simplesmente o banco de dados mais prático para você aprender a construir
+aplicações reais com Node.js.</div>
+</div>
+<div class="dark-card">
+<div class="circle light-blue">
+<img src="img/xexpressjs-logo.png.pagespeed.ic.pKLNdKyip5.webp" width="38" data-pagespeed-url-hash="3268639954" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+<div class="title">ExpressJS</div>
+<div class="paragraph">O framework web para Node.js mais utilizado no mundo, por empresas de todos
+os tamanhos.</div>
+</div>
+<div class="dark-card">
+<div class="circle green">
+<img src="img/xmicroservices-logo.png.pagespeed.ic.hGr_LqWkCU.webp" width="38" data-pagespeed-url-hash="2814918865" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+<div class="title">Microservices</div>
+<div class="paragraph">A arquitetura de software #1 atualmente quando o assunto é aplicações
+distribuídas e escaláveis.</div>
+</div>
+<div class="dark-card">
+<div class="circle yellow">
+<img src="img/xaws-logo.png.pagespeed.ic.r-eZf_WvQg.webp" width="38" data-pagespeed-url-hash="1210222982" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+<div class="title">Amazon AWS</div>
+<div class="paragraph">Não basta desenvolver, você tem de saber como subir a sua aplicação em
+produção. Que tal na Amazon AWS?</div>
+</div>
+<div class="dark-card">
+<div class="circle">
+<div class="emoji">🙌🏻</div>
+</div>
+<div class="title">E muito mais!</div>
+<div class="paragraph">Você aprenderá de maneira prática a usar os principais pacotes e técnicas do
+mercado.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<div class="w-layout-grid grid-4">
+<div class="div-block-66">
+<h4 class="heading-4">aulas e suporte com especialista</h4>
+<h1 class="heading-2">Teoria e prática, juntos</h1>
+<h3 class="heading-3 section">O curso foi construído pelo Prof. Luiz Duarte, baseado em 16 anos de
+experiência desenvolvendo softwares de todos os tamanhos.</h3>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point">Aprenda com um líder técnico experiente, que já formou
+centenas de programadores.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point">Grupo de Telegram com o professor e colegas, para suporte,
+vagas e troca de experiências.</div>
+</div>
+</div>
+<img src="img/xaula-node.jpg.pagespeed.ic.g9s08nyczf.webp" width="885" alt class="image-15 print-aula" data-pagespeed-url-hash="3569141141" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<div class="w-layout-grid grid-4"><img src="img/xplataforma-node.jpg.pagespeed.ic.mnd_AFoX_W.webp" width="885" alt class="image-16" data-pagespeed-url-hash="259317015" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+<div class="div-block-67">
+<h4 class="heading-4">PLATAFORMA COMPLETA</h4>
+<h1 class="heading-2">Estude no seu Ritmo</h1>
+<h3 class="heading-3 section">Todas aulas são gravadas e hospedadas em plataforma própria para que
+possa assistir quando e quantas vezes quiserem, além de muitos materiais extras.</h3>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point">Vídeos e artigos complementares às aulas, para se aprofundar
+nos conceitos.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point">Código-fonte do curso em repositório privado e ebooks de
+bônus.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a id="conteudo"></a>
+<div class="info-section">
+<div class="container-wrapper">
+<h4 class="heading-4">CONTEÚDO DO CURSO</h4>
+<h1 class="heading-2 width-1">Saia do zero e avance rapidamente!</h1>
+<h3 class="heading-3 section">Menos é mais: em poucas lições você já estará entendendo como funciona o
+Node.js e
+construindo aplicações e web APIs completas usando ExpressJS, MongoDB e as bibliotecas mais populares
+para Node.js.</h3>
+<div class="w-layout-grid grid-3">
+<div>
+<div class="dark-card top-image"><img src="img/xaula-node-2.jpg.pagespeed.ic.7scXVguyc9.webp" alt data-pagespeed-url-hash="117294318" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+<div class="div-block-68">
+<h4 class="heading-4">O QUE VOCÊ VAI APRENDER</h4>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">A base de programação Node.js, incluindo
+JavaScript, Event Loop e Promises.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Construção de front-ends modulares com EJS e
+Bootstrap</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Consulta, persistência e modelagem de dados
+usando MongoDB.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">WebAPI RESTful com arquitetura MVC em
+middlewares e autenticação via API Key.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Autenticação com PassportJS e JSON Web Token
+(JWT), incluindo criptografia.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Boas práticas de programação com JavaScript,
+ExpressJS,
+Joi e mais.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Arquitetura de micro serviços, API Gateway,
+JWT e
+outros
+conceitos profissionais de web APIs.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Autenticação (login e logout), autorização
+(perfis) e auditoria (logging) de web APIs e micro serviços.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Testes unitários e de integração para
+garantir a qualidade da nossa aplicação.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Manipulação e leitura de arquivos usando file
+system (fs).</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Publicação de aplicação e banco de dados na
+nuvem pública da Amazon AWS.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Envio de emails usando Nodemailer.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Segurança e replicação de instâncias de
+MongoDB.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Experiências práticas e conhecimento acumulado
+do professor e demais alunos.</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">E muito mais!</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Lista completa das aulas <a href="https://cursos.luiztools.com.br/cursos/node-js-e-mongodb/" target="_blank" class="white-highlight">aqui</a>.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="div-block-87">
+<div class="dark-card stacked">
+<h4 class="heading-4">MÓDULO 1</h4>
+<div class="title">Fundamentos</div>
+<div class="paragraph">Revisão de JavaScript, além de introdução ao Node.js, Event Loop e
+ExpressJS. Saia
+do zero e avance rapidamente.</div>
+<br/>
+<div class="paragraph"><b>Bônus:</b> Ebook "Node.js para Iniciantes".</div>
+</div>
+<div class="dark-card stacked">
+<h4 class="heading-4">MÓDULO 2</h4>
+<div class="title">Node.js + MongoDB</div>
+<div class="paragraph">A base de MongoDB e CRUD completo com o driver oficial para Node.js em um projeto de
+aplicação web completa com autenticação (Passport), criptografia, envio de email
+(Nodemailer), listagem, paginação, autorização por perfis, partial views e Bootstrap.</div>
+<br/>
+<div class="paragraph"><b>Bônus:</b> Ebook "Como Criar uma Web App com Node.js e MongoDB".</div>
+</div>
+<div class="dark-card stacked">
+<h4 class="heading-4">MÓDULO 3</h4>
+<div class="title">Web API RESTful</div>
+<div class="paragraph">Construção de uma Web API básica, com persistência em arquivos,
+arquitetura em middlewares (validação e autenticação), autenticação via API Key e padrão
+MVC.</div>
+<br/>
+<div class="paragraph"><b>Bônus:</b> Ebook "WebAPIs em Node.js".</div>
+</div>
+<div class="dark-card stacked">
+<h4 class="heading-4">MÓDULO 4</h4>
+<div class="title">Microservices</div>
+<div class="paragraph">Fundamentos e prática de micro serviços com estudo de caso, implementação
+com MongoDB, schema validation, API Gateway e segurança com JWT e mais.</div>
+<br/>
+<div class="paragraph"><b>Bônus:</b> Ebook "Entendendo Microservices".</div>
+</div>
+<div class="dark-card stacked">
+<h4 class="heading-4">MÓDULO 5</h4>
+<div class="title">Infraestrutura</div>
+<div class="paragraph">Publicação no Amazon AWS Lightsail com SSL, PM2 e MongoDB Atlas. Além
+disso, segurança e replicação de servidores MongoDB.</div>
+<br/>
+<div class="paragraph"><b>Bônus:</b> Ebook "Boas Práticas com Node.js".</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<div class="w-layout-grid grid-4"><img src="https://i0.wp.com/cursos.luiztools.com.br/wp-content/uploads/2022/04/fullstack-iniciantes.png?w=720&ssl=1" width="870" alt class="image-16" data-pagespeed-url-hash="2479582196" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+<div class="div-block-67">
+<h4 class="heading-4">FULLSTACK</h4>
+<h1 class="heading-2">BÔNUS #1</h1>
+<h3 class="heading-3 section">Quer aumentar a sua empregabilidade?</h3>
+<h3 class="heading-3 section">Você receberá como bônus um mini-curso de Fullstack para Iniciantes,
+onde eu e o prof. Daniel Castro vamos lhe ensinar a criar um projeto de micro-SaaS, do zero até
+produção utilizando a stack completa do JavaScript. Confira a ementa do curso na <a href="https://cursos.luiztools.com.br/cursos/fullstack-para-iniciantes/" target="_blank" class="white-highlight">página dele</a>.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<div class="w-layout-grid grid-4"><img src="https://cursos.luiztools.com.br/wp-content/uploads/2022/09/scrum-para-iniciantes.png" width="870" alt class="image-16" data-pagespeed-url-hash="3887839245" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+<div class="div-block-67">
+<h4 class="heading-4">AGILIDADE</h4>
+<h1 class="heading-2">BÔNUS #2</h1>
+<h3 class="heading-3 section">O mínimo que você deve saber sobre Agile e Scrum!</h3>
+<h3 class="heading-3 section">Você receberá como bônus um mini-curso de Scrum para Iniciantes,
+onde você vai aprender os fundamentos da gestão de projetos de software, os princípios da
+agilidade e o básico do framework Scrum, de longe o "método" mais referenciado nas empresas de
+tecnologias atualmente. Confira a ementa do curso
+na <a href="https://cursos.luiztools.com.br/cursos/scrum-para-iniciantes/" target="_blank" class="white-highlight">página dele</a>.</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<div class="w-layout-grid grid-4 about-me"><img src="img/xluiz.jpg.pagespeed.ic.Eqd8cdyVNW.webp" alt class="image-16" data-pagespeed-url-hash="3059744541" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+<div id="w-node-815d8fa77dc3-f9b93eee" class="div-block-85">
+<h4 class="heading-4">Conheça o instrutor</h4>
+<h2 class="heading-hero">Olá, sou Luiz Duarte</h2>
+<div class="div-block-82 feature"><a href="https://twitter.com/luiztools" target="_blank" class="w-inline-block">
+<div class="socialicon w-embed"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M23.0586 3.46294C22.101 4.13841 21.0407 4.65505 19.9186 4.99294C19.3163 4.30045 18.5159 3.80963 17.6256 3.58686C16.7353 3.3641 15.7981 3.42013 14.9407 3.74739C14.0833 4.07465 13.347 4.65734 12.8316 5.41665C12.3161 6.17597 12.0463 7.07527 12.0586 7.99294V8.99294C10.3012 9.0385 8.55987 8.64875 6.9896 7.85838C5.41934 7.06802 4.06891 5.90157 3.05859 4.46294C3.05859 4.46294 -0.941406 13.4629 8.05859 17.4629C5.99912 18.8609 3.54575 19.5619 1.05859 19.4629C10.0586 24.4629 21.0586 19.4629 21.0586 7.96294C21.0577 7.68439 21.0309 7.40653 20.9786 7.13294C21.9992 6.12643 22.7194 4.85565 23.0586 3.46294V3.46294Z" stroke="#d73802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<defs>
+<clipPath id="clip0">
+<rect x="0.0585938" y="0.462891" width="24" height="24" fill="white" />
+</clipPath>
+</defs>
+</svg></div>
+</a><a href="https://youtube.com/c/luiztools" target="_blank" class="w-inline-block">
+<div class="socialicon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d73802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-youtube">
+<path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+</path>
+<polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg></div>
+</a><a href="https://www.linkedin.com/in/luiztools/" target="_blank" class="w-inline-block">
+<div class="socialicon w-embed"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8V8Z" stroke="#d73802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M6 9H2V21H6V9Z" stroke="#d73802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="#d73802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg></div>
+</a><a href="https://www.instagram.com/luiztools_" target="_blank" class="w-inline-block">
+<div class="socialicon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d73802" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+</svg></div>
+</a>
+</div>
+<h3 class="heading-3 section _16px">Eu comecei na área de TI em <span class="white-highlight">2006</span> como suporte técnico, mas rapidamente mudei para
+programação, área que atuo até hoje, ora desenvolvendo, ora liderando projetos.
+<br/><br/>Desde então, tive a oportunidade de trabalhar em todo tipo, tamanho e complexidade
+de projetos, incluindo aplicações móveis, web, desktop, SaaS, PaaS, POS, barramentos de
+serviços, motores de busca, crawlers, <span class="white-highlight">bancos digitais</span> e até
+<span class="white-highlight">minha própria startup</span>, todos do zero até
+produção.<br/><br/>Como professor de graduação, pós-graduação e cursos livres, acumulo mais de
+uma década formando profissionais em diferentes tecnologias, além de ter mais de <a class="white-highlight" href="https://amzn.to/308Of0b" target="_blank">9 livros
+publicados</a> na área de software.<br/><br/>Nos últimos anos, tenho me dedicado ao
+ecossistema <span class="white-highlight">JavaScript</span> e suas inúmeras possibilidades,
+principalmente para construção de bots e web3.
+</h3>
+</div>
+</div>
+</div>
+</div>
+<div id="depoimentos" class="info-section">
+<div class="container-wrapper">
+<h1 class="heading-2 width-1">Depoimentos</h1>
+<h3 class="heading-3 section">Ok, mas eu já falei demais do meu curso e de mim mesmo. Gostaria que
+conhecesse alguns alunos, dentre os mais de 3 mil que já se formaram
+comigo, neste e em outros cursos. </h3>
+<div class="w-layout-grid grid-3">
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/eH-whs3qC1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/N4XvcwHW1LQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/-tRR1w7H40E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/77JwHo2Nr6I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/BhrHr-iFZLY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/uqG2al9JWvo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/DgIP0Sjqrco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/NwlTXi_EXg4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/IINGc2gd6n0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/qIjCjIDsbgQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/QKpmvJPz9fA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/qR2wlsDkcjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="info-section">
+<div class="container-wrapper">
+<div class="w-layout-grid grid-4">
+<div class="div-block-66">
+<h4 class="heading-4">ZERO RISCO</h4>
+<h1 class="heading-2">Satisfação garantida ou dinheiro de volta</h1>
+<h3 class="heading-3 section">Acredito em meu curso, mas se você quiser desistir da sua compra,
+tem 7 dias para fazê-lo e devolverei o valor investido integralmente.</h3>
+</div><img src="img/xgarantia.png.pagespeed.ic.n39ea6JbWw.webp" width="250px" alt class="image-15" data-pagespeed-url-hash="3855473406" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+</div>
+</div>
+</div>
+<div id="inscricao" class="info-section">
+<div class="container-wrapper">
+<h1 class="heading-2 width-1">Inscrição</h1>
+<h3 class="heading-3 section">Este é um curso online com videoaulas gravadas, mas que possui suporte com
+instrutor especialista, além de grupo de alunos que trocam entre si.</h3>
+<div class="w-layout-grid grid-3 pricing">
+<div>
+<div class="dark-card">
+<div>
+<h4 class="heading-4">O que você vai receber</h4>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">173 lições distribuídas em 5 módulos (aprox.
+30h),
+para te tirar do zero até a construção e deploy de aplicações
+reais.
+</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Plataforma online com acesso vitalício aos
+conteúdos do curso: videoaulas, artigos de apoio, vídeos complementares, ebooks,
+referências de livros e mais.
+</div>
+</div>
+<div class="feature">
+<div class="tick-embed w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.3333C14.6024 18.3333 18.3333 14.6024 18.3333 10C18.3333 5.39763 14.6024 1.66667 10 1.66667C5.39763 1.66667 1.66667 5.39763 1.66667 10C1.66667 14.6024 5.39763 18.3333 10 18.3333ZM10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20ZM8.8058 12.2011L5.58908 8.9863L4.41092 10.1652L8.80746 14.559L15.8733 7.47749L14.6935 6.30029L8.8058 12.2011Z" fill="#31AD65" />
+</svg></div>
+<div class="heading-3 bullet-point white">Grupo privado de alunos no Telegram para
+suporte com o professor e troca de experiências.</div>
+</div>
+</div>
+<br/>
+</div>
+</div>
+<div>
+<div class="dark-card pricing">
+<div>
+<h4 class="heading-4">Inscreva-se</h4>
+
+<div class="price">R$197,00</div>
+<div class="paragraph">Escolha e clique na forma de pagamento abaixo. Dúvidas? Email para
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adcec2c3d9ccd9c2edc1d8c4d7d9c2c2c1de83cec2c083cfdf">[email&#160;protected]</a><br/><br/></div>
+</div>
+<a href="#" target="_blank" class="cta-button hero-button pricing w-button" onclick="return alert('Faça o PIX para este CNPJ: 44.653.140/0001-34 e envie o comprovante para contato@luiztools.com.br')">
+<img src="img/28xNxpix-logo.png.pagespeed.ic.W460nH6kN6.webp" width="28" style="float: left;" data-pagespeed-url-hash="427049836" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+PIX CNPJ 44.653.140/0001-34</a>
+<br/>
+<a href="https://cursos.luiztools.com.br/carrinho/?add-to-cart=28930" target="_blank" class="cta-button hero-button pricing w-button"><svg width="24px" style="float:left;" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+<path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd" />
+</svg> Boleto e Cartão Nacional (até 18x)</a>
+<br/>
+<a href="https://www.luiztools.com.br/curso-nodejs-pp2" target="_blank" class="cta-button hero-button pricing w-button"><img src="img/64xNxpaypal-button.png.pagespeed.ic.ZnM-RxE-vn.webp" width="64px" style="float: left;" data-pagespeed-url-hash="3465629195" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> Cartão internacional</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a id="duvidas"></a>
+<div class="info-section">
+<div class="container-wrapper">
+<div>
+<h1 class="heading-2 width-1">Dúvidas Frequentes</h1>
+<h3 class="heading-3 section">Se você tiver quaisquer questões sobre o curso que não forem cobertas
+aqui, envie um email para <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7d1e1213091c09123d11081407091212110e531e1210531f0f">[email&#160;protected]</a></h3>
+</div>
+<div class="w-layout-grid grid-3 faq"></div>
+<button class="accordion title question">Para quem é este curso?</button>
+<div class="panel paragraph">Este curso é para programadores ou estudantes de programação que queiram
+aprender a construir aplicações web e web APIs de complexidade e porte médios, utilizando Node.js,
+MongoDB e diversas bibliotecas deste ecossistema.
+<br/><br/>
+</div>
+<button class="accordion title question">Esse curso possui pré-requisitos?</button>
+<div class="panel paragraph">
+O aluno já deve saber construir algoritmos em qualquer linguagem de programação e ter noções de banco de
+dados.<br/><br/>Conhecer HTML e JavaScript ajuda também, mas não é obrigatório.<br/><br/>
+</div>
+<button class="accordion title question">Este curso possui certificado?</button>
+<div class="panel paragraph">
+Sim, emito certificado de participação ao término das aulas, em nome da minha empresa de
+treinamentos e consultoria.<br/><br/>
+</div>
+<button class="accordion title question">Existe algum tipo de desconto?</button>
+<div class="panel paragraph">
+Somente para ex-alunos de outros cursos. Chame no grupo de alunos para mais informações.<br/><br/>
+</div>
+<button class="accordion title question">E se eu não gostar do curso?</button>
+<div class="panel paragraph">
+Conforme o Código de Defesa do Consumidor prevê, você tem por direito
+7 dias para desistir de uma compra online e lhe atenderei prontamente a este direito.
+Além disso, os pagamentos são realizados pela plataforma do Mercado Pago, uma das mais
+conhecidas e seguras do país, onde possuo uma reputação impecável há vários anos. Caso
+se sinta lesado, poderá solicitar ressarcimento pela própria plataforma também.<br/><br/>
+</div>
+<button class="accordion title question">Terei algum tipo de suporte se não entender algum
+conteúdo?</button>
+<div class="panel paragraph">
+Com certeza. O instrutor faz parte do grupo VIP de alunos
+no Telegram e você sempre pode lhe enviar emails no <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6d0e0203190c19022d01180417190202011e430e0200430f1f">[email&#160;protected]</a>, para resolver suas
+dúvidas.<br/><br/>
+</div>
+<button class="accordion title question">Quais são as formas de pagamento aceitas para o curso?</button>
+<div class="panel paragraph">
+O pagamento nacional é realizado via PIX à vista ou nas plataformas PayPal (até 6x sem juros), Mercado
+Pago (boleto ou até 12x com juros) ou PagSeguro (até 18x com juros), elas aceitam as principais
+bandeiras de cartão.<br/><br/>
+No caso de PIX, favor enviar comprovante para <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8cbc7c6dcc9dcc7e8c4ddc1d2dcc7c7c4db86cbc7c586cada">[email&#160;protected]</a><br/><br/>
+O pagamento internacional é realizado via PayPal, somente com cartão de crédito e sem
+parcelamento.<br/><br/>
+</div>
+<button class="accordion title question">Moro fora do país, mas gostaria de fazer o curso. Como faço para
+pagar?</button>
+<div class="panel paragraph">
+Você pode realizar o pagamento internacional via Payoneer ou PayPal.
+Envie um email para <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9af9f5f4eefbeef5daf6eff3e0eef5f5f6e9b4f9f5f7b4f8e8">[email&#160;protected]</a> solicitando mais informações.<br/><br/>
+</div>
+<button class="accordion title question">Poderei baixar as videoaulas na minha máquina?</button>
+<div class="panel paragraph">
+Infelizmente não é possível, por uma questão de proteção do direito autoral. Você pode assistir as aulas
+quando e quantas vezes quiser, mas sempre dentro da plataforma do curso, que você possui acesso
+vitalício.<br/><br/>
+</div>
+<button class="accordion title question">Este curso é iniciante, intermediário ou avançado?</button>
+<div class="panel paragraph">
+Este curso é para profissionais que estejam buscando uma posição júnior com Node.js, mas que já tenham
+conhecimentos básicos de programação oriundos da faculdade ou curso técnico, como algoritmos e lógica.
+<br/><br/>
+Se você for pleno ou sênior, mas estiver mudando para esta stack, este curso também vai ser
+útil.<br/><br/>
+</div>
+<button class="accordion title question">Poderei compartilhar o acesso ao curso com outras pessoas?</button>
+<div class="panel paragraph">
+Infelizmente não é possível, o curso deve ser adquirido separadamente por cada pessoa que deseja ter
+acesso a ele.<br/><br/>
+</div>
+<button class="accordion title question">Este curso está atualizado?</button>
+<div class="panel paragraph">
+Via de regra o curso é atualizado anualmente. No entanto, se encontrar algum problema em alguma lição,
+basta procurar o professor para que ele providencie a edição e/ou regravação da lição.<br/><br/>
+</div>
+</div>
+</div>
+<div class="info-section footer">
+<div class="container-wrapper">
+<div class="bottom-block"><a href="#" class="logo w-nav-brand"><img src="data:image/webp;base64,UklGRpoFAABXRUJQVlA4II4FAAAwGwCdASqJACEAPm0ulEYkIqIhK9TbwIANiWwAyUnsXL5gfX/yW9nyqv2zh3jMdi2Nz1Hfkn/Z+4B+qPSL8wH7K+rT+Kvuw/xfqMf2bqOPRA8tn2dP3V9LvOnOiT0QHrJAB0Vft/9j8Mdp//I7zvUDxevaX1OJi95lxfcgfor6FfpszVrmByrEoNUINhRI9tm9TqenboUQLQb5384FxQ8sIR6M0ue/zRL57891SdbDukHxHgu4HAKCGi+wdRD8Z0z1mVatEbYXfNMO0vXuKrIn3Ce6nB5xmUsKIBe1CEIVQ94wAP71y6GP5g4730AvyoY/tUFRTQdIUu6Eku5jAy+PwjXxmF3mf/z5hsCZSfhcJ7/7rlU30oRvZo78XtcMSBG7JHKoB53nj7+JVuSFCLbVm806Ar++STZvvH7N7WfQydcXOM7q8CD0AwwvMv7E/ofqurUTU+HACGz28xZ7ikurES79jPdt5z+Y+m9grSKFAVRn6VVOfxyptZ6hubv5tA2ZvO56uHbXCROXd7l9ulEH5psffq+9+gKU2ZthoLbJ6Gx6kfr/+zdYM+dNPURyPb1nHn/IJ2472msxuk1p+m4RMmLBrT+kWnt3Vmf4lfp4BdzA1yzKW5Gq8s6dP/55+6oomE+zk0r/h3goHEKbWDhbJLdGzlccHOBPgawEh33iE4Gp/MG4jyZbtX5ko7DWTcw6a+vfgMhOZfDpvYSLzH8dH+U4iRwXBO2XBSU/RnyeAyX/HS9ag3x5wgmac/PyKSrCDQxBmqPNmmeByTaohBN9OaIGTTaPAOINcXmXiTeQhaGQvIOQuYAc0gtHAp1W06cCV6fmUKUSK5sapBKIX8vZMv/SGNxEI2QXpNSn8ox/1v2AzUyuejLwyO5wLGGQsIRbv4i5rn+ETCzxtbSCx6+sDb0jUyMxv4g721kq6LaW97FC9t5wSNiyhFyXnsmKannl91F6B0PmxbWwG1WaK/vO1bXeQjM5I/PAEV9a6ZSd7QHqY8tsL9ZHGaEg+2tedLHAyv2T3ETp0XRTVmLlXyujscuJf+mlXUK7TOgrozCIYa3nVNdwO0dPormTYkypsHTAjljmWnhmaxElN6hwUaG4QUhBemM21bfLNDGAaQtetGeTMIkvhTWVmys4aTvspHrGZQ3XRffcVhcYkKdJy72a/efeG0QG5zMJZynNwwHVYvkbRbvrwQjy6okjmN54p1Ya1NiiYERc7kyw4Z/Rj4dEWg371tTfxqQFqLMRskeEKmQogaEdopvIXjd4uyDomzD3588fuFgnnrydxVpa3g5Z45Lb5jHlEn6r8vg8FAXw04FRPhzaQJYPL+z9iziMTCo/9vYDiwPM/Lrv/BSJ8G/D2bNrqG2zw/LdB5VXd4bMH/w4XLzo+VUzb7AQmUgqwF96ODgRXbkktr4FHw/yN30ifMs/gIO9c6wMz8uedREi6U1yx0f1D41AfvLF/NiAN2dAjrmY034PbF4CnYTw9kPQKhY/vA522FdZWmx790BcUeyWQll+mdXL2l4SUVl6ql2IssRf5UbX1DeVz6luOSf4TJJknDm8OSU3jBVk47/I/SpXPPQ79Qz3BfOV2UcCFuxgj+c7nxbtNn8xYk2p810QRpzazhA3fdfG7d5fCcYsSm4OGgCd8U8DJDEPmOe0a6p31y7t6FFB8BuemqaWb4CfHPBiD1PShWqTX2l7JEKtsc1i5H7JFWb7CmIsljPRLH+gXQlSo0KQ0edeZKCDlvf4fjueXvixW/Pn4tki22GjmpgcPjDKMBoSK4WSmShUkhAIH24XcxlxXfIRwQzTrH56+N/bSVyYQKcqIVbGpo38tHEDrjp1WSr/Ke45YAAKqIhC32SwBIQByllw0QSG3viAZBIe1QfMAY7uP7IAAAA=" alt data-pagespeed-url-hash="2779344225" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" /></a>
+<div class="footer-link-wrapper"><a href="https://www.luiztools.com.br/sobre" aria-current="page" class="footer-link-2 w--current">Sobre</a><a href="https://www.luiztools.com.br/meus-cursos" aria-current="page" class="footer-link-2 w--current">Meus Cursos</a><a href="https://www.luiztools.com.br/meus-livros" aria-current="page" class="footer-link-2 w--current">Meus Livros</a><a href="https://www.luiztools.com.br/meus-alunos" aria-current="page" class="footer-link-2 w--current">Meus Alunos</a><a href="/cdn-cgi/l/email-protection#1774787963766378577b627e6d6378787b643974787a397565286462757d7274632a5362617e737664" class="footer-link-2">Contato</a>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>
+<script src="js/webflow.js" type="text/javascript"></script>
+<script src="js/scripts.js" type="text/javascript"></script>
+<!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=+5551992963583&text=Olá%21%20Quero%20mais%20informações sobre%20o%20curso%20de%20Node.js.%20Entendo%20que%20fora%20do%20horário%20comercial%20eu%20posso%20demorar%20a%20receber%20uma%20resposta." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+</body>
+</html>
